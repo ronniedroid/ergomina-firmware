@@ -5,20 +5,20 @@ from kmk.scanners import DiodeOrientation
 
 
 class KMKKeyboard(_KMKKeyboard):
-    col_pins = (board.GP0, board.GP1, board.GP2, board.GP3, board.GP4)
-    row_pins = (
-        board.GP5,
-        board.GP6,
-        board.GP7,
-        board.GP8,
+    row_pins = (board.GP1, board.GP2, board.GP4, board.GP6, board.GP5)
+    col_pins = (
         board.GP9,
+        board.GP7,
+        board.GP11,
+        board.GP13,
+        board.GP14,
+        board.GP15,
         board.GP16,
-        board.GP17,
-        board.GP18,
         board.GP19,
-        board.GP20,
-        board.GP21,
         board.GP22,
+        board.GP21,
+        board.GP26,
+        board.GP17,
     )
 
     diode_orientation = DiodeOrientation.COL2ROW
@@ -26,9 +26,9 @@ class KMKKeyboard(_KMKKeyboard):
     # flake8: noqa
     # fmt: off
     coord_mapping = [
-         0,  1,  2,  3,  4,  5,  35, 34, 33, 32, 31, 30,
-         6,  7,  8,  9, 10, 11,  41, 40, 39, 38, 37, 36,
-        12, 13, 14, 15, 16, 17,  47, 47, 45, 44, 43, 42,
-        18, 19, 20, 21, 22, 23,  53, 52, 51, 50, 49, 48,
-                26, 27, 28, 29,  59, 58, 57,
+         0,  1,  2,  3,  4,   5,  6,  7,  8,  9, 10, 11,
+        12, 13, 14, 15, 16,  17, 18, 19, 20, 21, 22, 23,
+        24, 25, 26, 27, 28,  29, 30, 31, 32, 33, 34, 35,
+        36, 37, 38, 39, 40,  41, 42, 43, 44, 45, 46, 47,
+                50, 51, 52,  53, 54, 55, 56
      ]
