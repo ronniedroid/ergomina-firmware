@@ -1,2 +1,2 @@
-# Iris-RP2040
-A handwired Iris split keyboard using the Raspberry Pi Pico
+# Ergomina-firmware
+kmk firmware files for the 40 key ergomina keyboard.
