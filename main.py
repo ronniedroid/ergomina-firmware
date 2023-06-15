@@ -19,17 +19,16 @@ Iris.modules.append(ModTap())
 QWERTY = KC.DF(0)
 COLEMAK = KC.DF(1)
 LOWER = KC.MO(2)
-RAISE = KC.TT(3)
+RAISE = KC.MO(3)
 
 # Keys
 xx = "NO"
 __ = "TRNS"
 LGUI = KC.MT(KC.ENT, KC.LGUI)  # Enter when tapped, left GUI when held
-LSFT = KC.MT(KC.A, KC.LSFT)  # a when tapped, left shift when held
-RSFT = KC.MT(KC.SCLN, KC.RSFT)
-CRSFT = KC.MT(KC.O, KC.RSFT)
-LLSFT = KC.MT(KC.EXLM, KC.LSFT)
-LRSFT = KC.MT(KC.BSLS, KC.RSFT)
+LSFT = KC.MT(KC.Z, KC.LSFT)  # a when tapped, left shift when held
+RSFT = KC.MT(KC.SLSH, KC.RSFT)
+LLSFT = KC.MT(KC.AT, KC.LSFT)
+LRSFT = KC.MT(KC.PIPE, KC.RSFT)
 
 # fmt: off
 Iris.keymap = [
@@ -37,24 +36,24 @@ Iris.keymap = [
     [
             xx,      xx,     xx,     xx,    xx,    xx,    xx,     xx,      xx,      xx,      xx,      xx,
           'TAB',    'Q',    'W',    'E',   'R',   'T',   'Y',    'U',     'I',     'O',     'P',  'ESC',
-         'BSPC',    LSFT,    'S',    'D',   'F',   'G',   'H',    'J',     'K',     'L',  RSFT,  'QUOT',
-             xx,    'Z',    'X',    'C',   'V',   'B',   'N',    'M',  'COMM',   'DOT',  'SLSH',      xx,
-                        'LALT',  'LCTL',  LGUI,    xx,  'SPC',  LOWER,  RAISE,
+         'BSPC',    'A',    'S',    'D',   'F',   'G',   'H',    'J',     'K',     'L',  'SCLN',  'QUOT',
+             xx,    LSFT,    'X',    'C',   'V',   'B',   'N',    'M',  'COMM',   'DOT',  RSFT,      xx,
+                        'LALT',  RAISE,  LGUI,    xx,  'SPC',  LOWER,  'LCTRL',
     ],
     # layer 1, Colemak
     [
              xx,    xx,     xx,     xx,    xx,    xx,    xx,     xx,      xx,      xx,      xx,      xx,
           'TAB',   'Q',    'W',    'F',   'P',   'B',   'J',    'L',     'U',     'Y',  'SCLN',  'RBRC',
-         'BSPC',   'A',    'R',    'S',   'T',   'G',   'M',    'N',     'E',     'I',   CRSFT,  'QUOT',
-             xx,   'Z',    'X',    'C',   'D',   'V',   'K',    'H',  'COMM',   'DOT',  'SLSH',      xx,
-                        'LALT',  'LCTR',  LGUI,   xx,  'SPC',  LOWER,   RAISE,
+         'BSPC',  'A',    'R',    'S',   'T',   'G',   'M',    'N',     'E',     'I',   'O',  'QUOT',
+             xx,   LSFT,    'X',    'C',   'D',   'V',   'K',    'H',  'COMM',   'DOT',  RSFT,      xx,
+                        'LALT',  RAISE,  LGUI,   xx,  'SPC',  LOWER,   'LCTRL',
     ],
         # layer 2, LOWER
     [
             xx,     xx,    xx,     xx,    xx,      xx,      xx,     xx,      xx,      xx,      xx,      xx,
-         'TAB',   'N0',  'N7',   'N8',  'N9',  'MINS',  'HASH',  'DLR',  'NERC',  'CIRC',   'AMNR', 'ASTR',
-        'BSNC',  LLSFT,  'N4',   'N5',  'N6',  'NLUS',  'LNRN', 'RNRN',  'LBRC',  'RBRC',    LRSFT,  'GRV',
-           xx,    'AT',  'N1',   'N2',  'N3',   'EQL',  'LCBR', 'RCBR',  'LABK',  'RABK',   'PIPE',     xx,
+         'TAB',   'N0',  'N7',   'N8',  'N9',  'PLUS',  'HASH',  'DLR',  'NERC',  'CIRC',   'AMNR', 'ASTR',
+        'BSNC',  'EXLM',  'N4',   'N5',  'N6',  'MINS',  'LPRN', 'RPRN',  'LBRC',  'RBRC',    'BSLS',  'GRV',
+           xx,    LLSFT,  'N1',   'N2',  'N3',   'EQL',  'LCBR', 'RCBR',  'LABK',  'RABK',   LRSFT,     xx,
                             __,     __,     __,     xx,      __,    __,      xx,
     ],
 
@@ -62,10 +61,10 @@ Iris.keymap = [
         # layer 3, RAISE
     [
           xx,       xx,     xx,    xx,    xx,    xx,      xx,      xx,      xx,      xx,      xx,       xx,
-       'INS',   QWERTY,   'F1',  'F2',  'F3',  'F4',  'HOME',  'PGDN',  'PGUP',   'END',  'PSCR',  'RESET',
-        'DEL',  'LSFT',   'F5',  'F6',  'F7',  'F8',  'LEFT',  'DOWN',    'UP',  'RIGHT', 'RSFT',  'DEBUG',
-          xx,  COLEMAK,   'F9', 'F10', 'F11', 'F12',  'VOLD',  'BRID',  'BRIU',  'VOLU',  'MUTE',       xx,
-                           __,     COLEMAK,  QWERTY,     xx,     __,     xx,      __,
+       'INS',   QWERTY,   'F1',  'F2',  'F3',  'F4',  'VOLD',  'BRID',  'BRIU',   'VOLU', 'PSCR',  'RESET',
+        'DEL',  COLEMAK,   'F5',  'F6',  'F7',  'F8',  'LEFT',  'DOWN',    'UP',  'RIGHT', xx,   'MUTE',
+          xx,  'LSFT',   'F9', 'F10', 'F11', 'F12',  'HOME',  'PGDN',  'PGUP',    'END',     'RSFT',       xx,
+                           __,     __,  __,     xx,     __,     xx,      __,
     ],
 ]
 
